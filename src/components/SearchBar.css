@@ -1,0 +1,47 @@
+/* Section de recherche */
+form {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  padding: 12px;
+  width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff6347;
+}
+
+button {
+  padding: 12px 25px;
+  margin-left: 10px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4433;
+}
+
+@media (max-width: 480px){
+  input{
+    padding: 6px;
+    width: 200px;
+  }
+  button {
+    padding: 6px 12.5px;
+  }
+}

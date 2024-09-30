@@ -1,0 +1,94 @@
+/* SearchResults.css */
+
+body {
+  background-color: #c9c5c5;
+  font-family: Arial, sans-serif;
+}
+
+.search-results {
+  max-width: 1200px; /* Largeur maximale de la page */
+  margin: 20px auto; /* Centrer la page */
+  padding: 20px;
+  background-color: #d8d6d6;
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.search-results h2 {
+  font-size: 2rem; /* Taille du titre */
+  color: #333; /* Couleur du texte */
+  margin-bottom: 20px; /* Espacement */
+  text-align: center; /* Centrer le titre */
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grille réactive */
+  gap: 20px; /* Espacement entre les cartes */
+}
+
+.result-card {
+  background-color: #fff; /* Fond blanc pour chaque carte */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour les cartes */
+  overflow: hidden; /* Évite le débordement */
+  transition: transform 0.2s; /* Animation pour l'effet de survol */
+}
+
+.result-card:hover {
+  transform: translateY(-5px); /* Légère montée au survol */
+}
+
+.result-card img {
+  width: 100%; /* Image prend toute la largeur */
+  height: auto; /* Hauteur automatique pour garder le ratio */
+  border-bottom: 1px solid #eaeaea; /* Bordure en bas de l'image */
+}
+
+.result-card h3 {
+  font-size: 1.5rem; /* Taille du titre */
+  margin: 10px; /* Marges */
+  color: #333; /* Couleur du texte */
+  text-align: center; /* Centrer le texte */
+}
+
+.result-card a {
+  display: block; /* Rendre le lien un bloc */
+  padding: 10px; /* Espacement intérieur */
+  text-align: center; /* Centrer le texte du lien */
+  background-color: #ff6347; /* Couleur du bouton */
+  color: white; /* Couleur du texte */
+  text-decoration: none; /* Pas de soulignement */
+  border-radius: 0 0 10px 10px; /* Coins arrondis en bas */
+  transition: background-color 0.3s; /* Animation pour l'effet de survol */
+}
+
+.result-card a:hover {
+  background-color: #ff4500; /* Changer la couleur au survol */
+}
+
+.pagination {
+  display: flex; /* Utiliser flex pour le conteneur de pagination */
+  justify-content: center; /* Centrer la pagination */
+  margin-top: 20px; /* Espacement en haut */
+}
+
+.pagination button {
+  background-color: #ff6347; /* Couleur des boutons */
+  color: white; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 10px 15px; /* Espacement intérieur */
+  margin: 0 5px; /* Marges entre les boutons */
+  cursor: pointer; /* Curseur pointer pour les boutons */
+  transition: background-color 0.3s; /* Animation pour l'effet de survol */
+}
+
+.pagination button:hover {
+  background-color: #ff4500; /* Changer la couleur au survol */
+}
+
+.pagination span {
+  align-self: center; /* Centrer le texte des pages */
+  margin: 0 10px; /* Espacement */
+}

@@ -1,0 +1,132 @@
+/* Styles généraux pour les pages Ingrédients, Catégories, et Pays */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #c9c5c5;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ff6347;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Section cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Styles pour chaque card (catégorie, ingrédient, pays) */
+.card {
+  flex: 1 1 calc(25% - 20px); /* Quatre cartes par ligne par défaut */
+  background-color: #fff;
+  border: 2px solid #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover h3 {
+  color: #ff6347;
+}
+
+/* Animation on hover for smooth interaction */
+.card:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Grid adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(33.33% - 20px); /* Trois cartes par ligne */
+  }
+}
+
+
+
+
+/* Pagination styles (if applicable) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #e5533d;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Search bar */
+.search-bar-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-bar-section input {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  margin-right: 10px;
+}
+
+.search-bar-section button {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar-section button:hover {
+  background-color: #e5533d;
+}

@@ -1,0 +1,283 @@
+/* Header.css */
+
+/* Style par défaut pour les écrans de taille normale */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 50px;
+  background-color: #ff6347; /* Couleur de fond */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre améliorée */
+  margin-bottom: 0.5%;
+  transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+.logo-img {
+  height: 70px; /* Ajustement de la hauteur du logo */
+}
+
+.burger {
+  display: none; /* Masquer par défaut */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-item {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.067);
+  border-radius: 25px;
+}
+
+.nav-item:hover {
+  color: #ffe4e1; /* Couleur au survol */
+  background-color: #e5533deb;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn,
+a {
+  background-color: transparent; /* Rendre le bouton transparent */
+  color: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 1;
+  text-align: left;
+  border-radius: 5px; /* Coins arrondis pour le menu déroulant */
+}
+
+.dropdown-content a {
+  color: #282828;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #e5533deb; /* Couleur au survol des éléments du menu déroulant */
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 200px;
+  overflow-y: auto; /* Permet le défilement */
+}
+
+/* Styles personnalisés pour la scrollbar */
+.dropdown:hover .dropdown-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown:hover .dropdown-content::-webkit-scrollbar-thumb {
+  background-color: #ff6347; /* Couleur du "pouce" de la scrollbar */
+  border-radius: 25px;
+}
+
+.dropdown:hover .dropdown-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Couleur de la piste de la scrollbar */
+}
+
+/* Pour Firefox */
+.dropdown:hover .dropdown-content {
+  scrollbar-width: thin;
+  scrollbar-color: #ff6347 #f1f1f1; /* Définit la couleur du pouce et de la piste */
+}
+
+.search-bar-header {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar-header input {
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  width: 200px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease; /* Transition pour le champ de recherche */
+}
+
+.search-bar-header input:focus {
+  border-color: #ff6347; /* Couleur de la bordure au focus */
+}
+
+.search-button-header {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: white;
+  color: #ff6347;
+  border: 1px solid #ff6347;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-button-header:hover {
+  background-color: #ff6347;
+  color: white;
+}
+
+/* Media Queries pour petits écrans */
+@media (max-width: 1024px) {
+  .main-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 20px;
+  }
+
+  .search-bar-header {
+    display: none; /* Masquer la barre de recherche pour les petits écrans */
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav-item,
+  .dropbtn {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background-color: #ff6347; /* Fond de l'en-tête pour cohérence */
+  }
+
+  .logo-img {
+    height: 90px;
+  }
+
+  .nav-links {
+    display: none; /* Masquer les liens de navigation par défaut */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Ajustez selon la hauteur de l'en-tête */
+    left: 0;
+    background-color: #fff; /* Couleur de fond opaque pour le menu */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre pour le menu */
+    z-index: 10; /* Assure que le menu soit au-dessus des autres éléments */
+    border-radius: 8px; /* Coins arrondis pour le menu */
+    transition: max-height 0.3s ease-in-out; /* Transition douce lors de l'ouverture */
+    max-height: 0; /* Hauteur max par défaut pour masquer */
+    overflow: inherit; /* Cacher le débordement */
+  }
+
+  .nav-links.open {
+    display: flex; /* Afficher le menu quand il est ouvert */
+    max-height: 1000px; /* Hauteur max quand le menu est ouvert */
+  }
+
+  .dropbtn{
+    color: #333;
+  }
+
+  .burger {
+    display: flex; /* Afficher le bouton hamburger sur petits écrans */
+    cursor: pointer; /* Curseur pour indiquer qu'il est cliquable */
+    flex-direction: column; /* Alignement des lignes du hamburger */
+    gap: 4px; /* Espacement entre les lignes */
+    padding: 5px; /* Ajout d'un peu d'espace autour du bouton hamburger */
+    transition: transform 0.3s ease; /* Animation pour le hamburger */
+  }
+
+  .burger div {
+    width: 30px; /* Largeur des lignes du hamburger */
+    height: 4px; /* Hauteur des lignes du hamburger */
+    background-color: #fff; /* Couleur des lignes du hamburger */
+    border-radius: 5px; /* Coins arrondis pour le hamburger */
+    transition: all 0.3s ease; /* Transition douce pour les animations */
+  }
+
+  /* Styles pour le menu quand il est ouvert */
+  .nav-item {
+    padding: 15px 20px; /* Plus d'espace autour des éléments de menu */
+    color: #282828; /* Couleur des liens */
+    text-align: center; /* Centrer le texte des liens */
+    font-size: 1.1rem; /* Taille de police légèrement plus grande */
+    border-bottom: 1px solid #f0f0f0; /* Lignes séparatrices pour chaque élément */
+    transition: background-color 0.3s ease; /* Transition douce pour le survol */
+  }
+
+  .nav-item:hover {
+    background-color: #ffe4e1; /* Couleur au survol pour un meilleur contraste */
+    color: #ff6347; /* Changer la couleur du texte au survol */
+  }
+
+  .nav-item:last-child {
+    border-bottom: none; /* Supprimer la ligne séparatrice pour le dernier élément */
+  }
+
+  /* Animation pour le hamburger quand le menu est ouvert */
+  .burger.open div:nth-child(1) {
+    transform: translateY(10px) rotate(45deg); /* Première ligne devient la partie supérieure du X */
+  }
+
+  .burger.open div:nth-child(2) {
+    opacity: 0; /* Deuxième ligne disparait */
+  }
+
+  .burger.open div:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg); /* Troisième ligne devient la partie inférieure du X */
+  }
+}
