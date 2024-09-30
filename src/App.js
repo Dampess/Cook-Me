@@ -10,7 +10,7 @@ import PopularRecipes from "./pages/PopularRecipes";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Cook-Me">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category/:categoryName" element={<CategoryPage />} />
